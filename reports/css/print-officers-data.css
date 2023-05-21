@@ -1,0 +1,17 @@
+@page {
+  width: A4;
+  margin: 0;
+}
+.flex {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.pagination li,
+.btn {
+  display: none;
+}
+
+.form .container .wrap {
+  display: none;
+}

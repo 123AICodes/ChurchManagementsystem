@@ -1,0 +1,22 @@
+@page {
+  width: A4;
+  margin: 0;
+}
+.buttons {
+  display: none;
+}
+.container {
+  display: none;
+}
+.number-of-rows {
+  display: none;
+}
+.bottom-field {
+  display: none;
+}
+.btn {
+  display: none;
+}
+.error-msg {
+  display: none;
+}

@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  transition: all 0.15s linear;
+  font-family: system-ui, cursive;
+}
+/* =================VARIABLES=================
+============================================== */
+:root {
+  --red: hsl(5, 78%, 57%) !important;
+  --blue: hsl(225, 69%, 52%) !important;
+  --gray: hsl(231, 26%, 89%) !important;
+  --red-alt: hsl(5, 93%, 52%) !important;
+  --red-alt-bg: hsl(4, 79%, 83%, 0.3) !important;
+  --black: hsl(0, 0%, 10%) !important;
+  --black-1: hsl(232, 8%, 38%) !important;
+  --green: hsl(166, 81%, 42%) !important;
+  --green-alt: hsl(166, 85%, 42%) !important;
+  --green-alt-bg: rgba(85, 188, 165, 0.2) !important;
+  --white: rgb(255, 255, 255) !important;
+  --yellow: hsl(43, 91%, 60%) !important;
+  --sea-blue: hsl(188, 90%, 46%) !important;
+  --black-alt: hsl(232, 8%, 68%) !important;
+  --background: hsl(225, 40%, 98%) !important;
+  --background-1: hsl(225, 40%, 98%) !important;
+  --light-white: hsl(200, 18%, 80%) !important;
+  --text-gray-500: hsl(234, 17%, 76%) !important;
+}
+/* =================GLOBAL==================
+============================================== */
+body {
+  font-size: 0.784rem;
+  color: var(--black);
+  overflow-x: hidden;
+  background: var(--white);
+}
+a {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+.text-gray-500 {
+  color: var(--gray);
+}
+/* ======================MAIN STYLING==================
+========================================================== */
+.print-container {
+  width: 92%;
+  margin-inline: auto;
+  /* overflow: hidden; */
+}
+.print-container h2 {
+  font-size: 1.6rem;
+  padding: 0.1rem 0;
+  text-align: center;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.dashboard {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+}
+.dashboard.bk {
+  background: var(--red);
+}
+.dashboard:hover {
+  opacity: 0.8;
+}
+
+/* ==========================Form===============
+================================================ */
+.flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .wrap {
+  padding: 0.5rem;
+  margin: 0.4rem 0;
+  width: 70vw;
+  text-align: center;
+}
+.container .wrap .offering-btn {
+  padding: 0.4rem 1rem;
+  color: var(--black);
+  margin: 0 0.4rem;
+  background: var(--gray);
+  border-radius: 5rem;
+}
+.container .wrap .offering-btn.active,
+.container .wrap .offering-btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.group-box {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.3rem;
+}
+.group-box.mb {
+  align-items: center;
+  justify-content: center;
+}
+article {
+  margin: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+article span {
+  margin: 0 0.3rem;
+  color: var(--black);
+}
+article select {
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+  border-radius: 0.38rem 0 0 0.38rem;
+}
+.find {
+  padding: 0.33rem 0.5rem;
+  border-radius: 0 0.38rem 0.38rem 0;
+  background: var(--blue);
+  color: var(--white);
+}
+/* message if no record is found */
+.error-msg {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red-alt-bg);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.error-msg p {
+  font-size: 1.4rem;
+  color: var(--red);
+}
+/* table */
+.number-of-rows {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 1.6rem;
+  outline: none;
+}
+.number-of-rows > select {
+  padding: 0.2rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background: var(--white);
+  border: 1px solid var(--gray);
+}
+.recent-table {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: max-content;
+  border: 1px solid var(--black);
+  /* overflow: hidden; */
+}
+.recent-table thead tr th,
+td {
+  padding: 0.5rem;
+  border: 1px solid var(--black);
+}
+.recent-table tr th,
+td {
+  border-bottom: 1px solid var(--black);
+}
+.recent-table tbody tr td {
+  padding: 0.5rem;
+}
+.recent-table tbody tr {
+  border-bottom: 1px solid var(--gray);
+}
+.date {
+  width: 100%;
+  text-align: center;
+  padding: 0.3rem 0;
+}
+.print-container h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* pagination */
+.bottom-field {
+  position: relative;
+  bottom: 0rem;
+  width: 100%;
+  padding: 0.5rem 1.6rem;
+}
+.pagination {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.pagination li {
+  margin: 0.1rem;
+  flex-shrink: 0;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+  color: var(--black);
+}
+.pagination li.active {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+}
+.pagination li a {
+  color: inherit;
+  padding: 0.15rem 0.5rem;
+  display: block;
+  font-size: 1rem;
+}
+.content-wrapper {
+  width: 100%;
+  display: block;
+}
+.computation {
+  margin-top: 2rem;
+}
+.computation div {
+  text-align: right;
+  margin: 1rem auto;
+}
+.btn-container {
+  width: 92%;
+}
+.btn-container button {
+  padding: 0.5rem 1.5rem;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.9rem;
+  border-radius: 0.38rem;
+}
+.btn-container button:hover {
+  background: var(--black);
+}
+@media screen and (max-width: 1091px) {
+  .print-container {
+    max-width: 100%;
+    /* overflow-x: scroll; */
+  }
+  .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+  .flex .container {
+    width: 100%;
+    /* background: red; */
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .group-box {
+    flex-direction: column;
+  }
+  article {
+    min-width: 82vw;
+  }
+  article select {
+    width: 100%;
+  }
+  .buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .content-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .container .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+}

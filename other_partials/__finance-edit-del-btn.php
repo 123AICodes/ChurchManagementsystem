@@ -1,0 +1,2 @@
+<a href="<?= ROOT_URL ?>edit-finance.php?edit_finance_id_number=<?= $finance['id'] ?>" class="btn-sm edit">edit</a>&nbsp;&nbsp;
+<a href="<?= ROOT_URL ?>delete-finance.php?logic/delete_finance_id_number=<?= $finance['id'] ?>" class="btn-sm delete">delete</a>
